@@ -4,23 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.study.books</groupId>
+        <artifactId>master</artifactId>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>com.study.books</groupId>
-    <artifactId>master</artifactId>
+    <artifactId>algorithm</artifactId>
     <version>1.0.1</version>
-    <name>master</name>
-    <packaging>pom</packaging>
+    <name>algorithm</name>
     <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>homework</module>
-        <module>algorithm</module>
-    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -32,23 +25,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>

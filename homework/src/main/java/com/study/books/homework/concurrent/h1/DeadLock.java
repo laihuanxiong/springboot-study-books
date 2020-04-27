@@ -1,5 +1,7 @@
 package com.study.books.homework.concurrent.h1;
 
+import java.nio.ByteBuffer;
+
 //@todo 死锁的产生情况（静态死锁）
 public class DeadLock {
 
@@ -31,13 +33,10 @@ public class DeadLock {
     }
 
     private static class MyThread implements Runnable {
-
         private String name;
-
         public MyThread(String name) {
             this.name = name;
         }
-
         @Override
         public void run() {
             Thread.currentThread().setName(name);
