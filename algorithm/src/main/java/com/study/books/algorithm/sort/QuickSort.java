@@ -6,6 +6,8 @@ package com.study.books.algorithm.sort;
 //@todo 简述
 //@todo 快速排序，看这名字就知道这是一种很快的排序方法，实际上也是如此。快速排序属于分治法的一种，就是说通过把数据分成几部分来同时处理的一种算法。
 
+import java.util.Arrays;
+
 //@todo 时空复杂度
 //@todo 快速排序的最差时间复杂度和冒泡排序是一样的都是O(n2)
 //@todo 不需要额外的空间，空间复杂度为O(1)
@@ -61,9 +63,8 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = {6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
+        System.out.println("排序前："+ Arrays.toString(arr));
         quickSort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 }

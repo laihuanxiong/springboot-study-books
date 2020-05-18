@@ -7,6 +7,8 @@ package com.study.books.algorithm.sort;
 //@todo 希尔排序的时间复杂度与增量(即，步长gap)的选取有关。例如，当增量为1时，希尔排序退化成了直接插入排序，此时的时间复杂度为O(N²)，
 //@todo 而Hibbard增量的希尔排序的时间复杂度为O(N3/2)。空间复杂度O(1)。
 
+import java.util.Arrays;
+
 public class ShellSort {
 
     public static void sort(int[] arr) {
@@ -44,13 +46,8 @@ public class ShellSort {
 
     public static void main(String[] args) {
         int[] arr = {1,4,2,6,5,7};
-        for (int i : arr) {
-            System.out.printf(i+" ");
-        }
-        System.out.println();
+        System.out.println("排序前："+ Arrays.toString(arr));
         sort(arr);
-        for (int i : arr) {
-            System.out.printf(i+" ");
-        }
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 }

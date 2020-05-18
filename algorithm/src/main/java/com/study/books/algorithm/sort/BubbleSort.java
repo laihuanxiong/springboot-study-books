@@ -16,6 +16,8 @@ package com.study.books.algorithm.sort;
 //@todo 正序：所需的比较次数C和记录移动次数M均达到最小值，即：Cmin=n-1;Mmin=0;所以，冒泡排序最好的时间复杂度为O(n)。
 //@todo 反序：每趟排序要进行n-i次比较(1≤i≤n-1)，且每次比较都必须移动记录三次来达到交换记录位置。在这种情况下，比较和移动次数均达到最大值，那可以知道冒泡排序的最坏时间复杂度为：O(n2)：
 
+import java.util.Arrays;
+
 public class BubbleSort {
     public static int[] sort(int[] array) {//外层循环控制排序趟数
         for (int i = 0; i < array.length - 1; i++) {//内层循环控制每一趟排序多少次
@@ -31,9 +33,9 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int[] array = {6, 3, 8, 2, 9, 1};
-        for (int i : sort(array)) {
-            System.out.println(i);
-        }
+        int[] arr = {6, 3, 8, 2, 9, 1};
+        System.out.println("排序前："+ Arrays.toString(arr));
+        sort(arr);
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 }

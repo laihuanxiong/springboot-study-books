@@ -7,6 +7,8 @@ package com.study.books.algorithm.sort;
 //@todo 逐个向有序序列中执行插入操作，从而得到n个元素按关键字有序的序列。一般来说，在含有j-1个元素的有序序列中插入一个元素的方法是：
 //@todo 从第j-1个元素开始依次向前搜索应当插入的位置，并且在搜索插入位置的同时可以后移元素，这样当找到适当的位置时，即可插入元素
 
+import java.util.Arrays;
+
 public class InsortSort {
 
     public static void sort(int[] a) {
@@ -22,13 +24,8 @@ public class InsortSort {
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 2, 5};
-        for (int i : arr) {
-            System.out.printf(" "+i);
-        }
-        System.out.println();
+        System.out.println("排序前："+ Arrays.toString(arr));
         sort(arr);
-        for (int i : arr) {
-            System.out.printf(" "+i);
-        }
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 }

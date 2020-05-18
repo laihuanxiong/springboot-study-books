@@ -7,6 +7,8 @@ package com.study.books.algorithm.sort;
 //@todo 无论数组原始排列如何，比较次数是不变的；对于交换操作，在最好情况下也就是数组完全有序的时候，无需任何交换移动时间复杂度，在最差情况下，
 //@todo 也就是数组倒序的时候，交换次数为n-1次。综合下来，时间复杂度为O(n2)。不需要额外的空间，空间复杂度为O(1)。
 
+import java.util.Arrays;
+
 public class SelectionSort {
 
     public static void sort(int[] arr) {
@@ -28,10 +30,9 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] arr={1,3,2,45,65,33,12};
+        System.out.println("排序前："+ Arrays.toString(arr));
         sort(arr);
-        for (int i : arr) {
-            System.out.println(i);
-        }
+        System.out.println("排序后："+ Arrays.toString(arr));
     }
 
 }
